@@ -1,0 +1,93 @@
+baseURL = "http://blog.kenlee.me"
+# determines default content language
+defaultContentLanguage = "en"
+title = "Ken's 學習日誌"
+theme = "LoveIt"
+enableEmoji = true
+
+[params]
+  # LoveIt theme version
+  version = "0.2.X"
+  [params.app]
+    svgFavicon = "/images/logo.svg"
+  # Home page config
+  [params.home]
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.png"
+      # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
+      title = "Ken Lee"
+      # subtitle shown in home page
+      subtitle = "從零開始學習的工程師"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+    # Social config about the author
+    [params.social]
+      GitHub = "https://github.com/kenlee0852"
+      Facebook = "https://www.facebook.com/ken.li.121"
+      Email = "kenlee0852@gmail.com"
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = "/images/logo.svg"
+      # title name
+      name = "Ken's 學習日誌"
+      pre = "&nbsp;&nbsp;"
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+
+# Author config
+[author]
+  name = "Ken"
+  email = "kenlee0852@gmail.com"
+  link = ""
+
+# Permalinks config
+[Permalinks]
+  posts = ":year/:month/:filename"
